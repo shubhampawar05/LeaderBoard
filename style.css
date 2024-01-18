@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  /* width: 100%; */
+  height: 100vh;
+  background-image: url(./a.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
+  text-align: center;
+  margin: 2rem 20% 2rem;
+}
+main h1 {
+  background: linear-gradient(to right, rgb(255, 0, 0), blue);
+  background-clip: text;
+  color: transparent;
+  animation: anime 2s infinite alternate;
+  font-size: 45px;
+  margin-bottom: 1.5rem;
+}
+@keyframes anime {
+  100% {
+    background: linear-gradient(to right, blue, red);
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+
+form input{
+    width: 20%;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+    box-shadow: 0 0 10px black;
+    margin-left: 0.5rem;
+    outline: none;
+}
+form button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+}
+form input:hover{
+    outline: none;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.542);
+}
+
+.listdiv{
+    width: 800px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+    padding: 0.5rem 0.2rem;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    box-shadow: 0 5px 10px black;
+    align-items: center;
+
+}
+.listname{
+    width: 20%;
+}
+.btn0{
+    padding: 0.2rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 16px;
+}
