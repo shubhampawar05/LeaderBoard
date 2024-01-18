@@ -57,8 +57,7 @@ addBtn.addEventListener("click", (e) => {
     let name = document.createElement("div");
     let place = document.createElement("div");
     let points = document.createElement("div");
-    let btn = document.createElement("div");
-    let deletebtn = document.createElement("span");
+    var deletebtn = document.createElement("span");
     let add = document.createElement("button");
     let minus = document.createElement("button");
 
@@ -66,10 +65,13 @@ addBtn.addEventListener("click", (e) => {
     name.classList.add("listname");
     add.classList.add("btn0");
     minus.classList.add("btn0");
+    place.classList.add('place')
+    deletebtn.classList.add('deletbtn')
+
 
     add.setAttribute("onclick", `addfuction(${index})`);
     minus.setAttribute("onclick", `minusfuction(${index})`);
-    deletebtn.setAttribute("onclick", `deletefuction(${index})`);
+    // deletebtn.setAttribute("onclick", `deletefuction(${index})`);
 
     name.innerText = item.name;
     place.innerText = item.country;
@@ -83,6 +85,19 @@ addBtn.addEventListener("click", (e) => {
 
     list.append(div);
 
+    // document.querySelector('.deletbtn').addEventListener('click',(e)=>{
+    //     // console.log(e.target.parentNode);
+    //   e.target.parentNode.remove();
+    // });
+
+    let allbtns = document.querySelectorAll('.deletbtn')
+allbtns.forEach((items)=>{
+  items.addEventListener('click',()=>{
+    items.parentNode.remove();
+    console.log('saf');
+  })
+})
+
     document.getElementById("firstName").value='';
     document.getElementById("lasttName").value='';
     document.getElementById("Country").value='';
@@ -91,6 +106,7 @@ addBtn.addEventListener("click", (e) => {
     
   }
 });
+
 
 function updatefuction() {
   let list = document.getElementById("playerlist");
@@ -107,31 +123,47 @@ function updatefuction() {
     let name = document.createElement("div");
     let place = document.createElement("div");
     let points = document.createElement("div");
-    let btn = document.createElement("div");
-    let deletebtn = document.createElement("span");
+    var deletebtn = document.createElement("span");
     let add = document.createElement("button");
     let minus = document.createElement("button");
 
+  
     div.classList.add("listdiv");
     name.classList.add("listname");
     add.classList.add("btn0");
     minus.classList.add("btn0");
+    place.classList.add('place')
+    deletebtn.classList.add('deletbtn')
 
     add.setAttribute("onclick", `addfuction(${index})`);
     minus.setAttribute("onclick", `minusfuction(${index})`);
-    deletebtn.setAttribute("onclick", `deletefuction(${index})`);
+    // deletebtn.setAttribute("onclick", `deletefuction(${index})`);
 
     name.innerText = item.name;
     place.innerText = item.country;
     points.innerText = item.score;
 
-    deletebtn.innerText = "abc";
-    add.innerText = "+5";
-    minus.innerText = "-5";
+    deletebtn.innerText = "❌";
+    add.innerText = "➕ 5";
+    minus.innerText = "➖ 5";
 
     div.append(name, place, points, add, minus, deletebtn);
 
     list.append(div);
+
+  //   document.querySelector('.deletbtn').addEventListener('click',(e)=>{
+  //     // console.log(e.target.parentNode);
+  //   e.target.parentNode.remove();
+  // });
+  let allbtns = document.querySelectorAll('.deletbtn')
+  allbtns.forEach((items)=>{
+    items.addEventListener('click',()=>{
+      items.parentNode.remove();
+      console.log('saf');
+    })
+  })
+
+    
   }
 }
 

@@ -57,12 +57,12 @@ form input:hover{
 
 .listdiv{
     width: 800px;
-    background-color: aqua;
+    background-color: transparent;
     display: flex;
     justify-content: space-evenly;
     margin: 1rem 0;
     padding: 0.5rem 0.2rem;
-    color: black;
+    color: white;
     font-weight: 500;
     font-size: 18px;
     box-shadow: 0 5px 10px black;
@@ -71,6 +71,9 @@ form input:hover{
 }
 .listname{
     width: 20%;
+}
+.place{
+  width: 20%;
 }
 .btn0{
     padding: 0.2rem 1rem;
