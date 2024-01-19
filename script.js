@@ -91,9 +91,10 @@ addBtn.addEventListener("click", (e) => {
     // });
 
     let allbtns = document.querySelectorAll('.deletbtn')
-allbtns.forEach((items)=>{
-  items.addEventListener('click',()=>{
+    allbtns.forEach((items,index)=>{
+    items.addEventListener('click',()=>{
     items.parentNode.remove();
+    arr.splice(index,1);
     console.log('saf');
   })
 })
@@ -155,13 +156,23 @@ function updatefuction() {
   //     // console.log(e.target.parentNode);
   //   e.target.parentNode.remove();
   // });
+
   let allbtns = document.querySelectorAll('.deletbtn')
-  allbtns.forEach((items)=>{
-    items.addEventListener('click',()=>{
-      items.parentNode.remove();
-      console.log('saf');
-    })
-  })
+  allbtns.forEach((items,index)=>{
+  items.addEventListener('click',()=>{
+  items.parentNode.remove();
+  arr.splice(index,1);
+  console.log('saf');
+})
+})
+
+  // let allbtns = document.querySelectorAll('.deletbtn')
+  // allbtns.forEach((items)=>{
+  //   items.addEventListener('click',()=>{
+  //     items.parentNode.remove();
+  //     console.log('saf');
+  //   })
+  // })
 
     
   }
